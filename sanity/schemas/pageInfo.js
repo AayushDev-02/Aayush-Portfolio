@@ -1,9 +1,6 @@
-import { m } from 'framer-motion'
-import {defineField, defineType} from 'sanity'
-
-export default defineType({
+export default {
   name: 'pageInfo',
-  title: 'PageInfo',
+  title: 'pageInfo',
   type: 'document',
   fields: [
     {
@@ -11,52 +8,62 @@ export default defineType({
       title: 'Name',
       type: 'string',
     },
+
     {
       name: 'role',
       title: 'Role',
       type: 'string',
     },
+    
     {
       name: 'heroImage',
       title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
-      },
+      }
     },
+
     {
-      name: 'backgrounInformation',
+      name: 'backgroundInformation',
       title: 'BackgroundInformation',
       type: 'string',
     },
+
     {
       name: 'profilePic',
       title: 'ProfilePic',
       type: 'image',
       options: {
         hotspot: true,
-      },
+      }
     },
+
     {
       name: 'phoneNumber',
       title: 'PhoneNumber',
       type: 'string',
     },
+
     {
       name: 'email',
       title: 'Email',
       type: 'string',
     },
+
     {
       name: 'address',
       title: 'Address',
       type: 'string',
     },
+
     {
       name: 'socials',
       title: 'Socials',
-      type: "array",
-      of:[{type: "reference", to: {type: "social"}}],
+      type: 'array',
+      of: [{type: 'reference', to:{type: 'social'}}]
     },
   ],
-})
+
+  
+}

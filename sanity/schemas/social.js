@@ -1,20 +1,33 @@
-import {defineField, defineType} from 'sanity'
-
-export default defineType({
+export default {
   name: 'social',
   title: 'Social',
   type: 'document',
   fields: [
-    defineField({
+    {
       name: 'title',
       title: 'Title',
-      description: 'Platform for social media',
+      description: 'Title of Skill',
       type: 'string',
-    }),
-    defineField({
-      name: 'url',
-      title: 'Url',
-      type: 'url',
-    }),
+    },
+
+    {
+      name: 'progress',
+      title: 'Progress',
+      type: 'number',
+      description: 'progress of skill from 0 to 100',
+      validation: (Rule) => Rule.min(0).max(100),
+    },
+
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      }
+    },
+
   ],
-})
+
+  
+}
